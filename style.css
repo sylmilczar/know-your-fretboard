@@ -1,0 +1,137 @@
+/* 
+    BASIC CSS RESET
+*/
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+ 
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    background-color: #f9f9f9;
+}
+
+
+/* 
+    LAYOUT
+*/
+.wrapper {
+    margin: 0 auto;
+    min-width: 900px;
+    max-width: 1600px;
+}
+#fretboard {
+    padding: 3rem 0;
+}
+.controls {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+}
+.options {
+    width: 40%;
+}
+.selected-notes {
+    width: 60%;
+    height: 15rem; 
+}
+
+/* 
+    HEADER
+*/
+header {
+    text-align: center;
+}
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* 
+    SELECTED NOTES CONTAINER STYLES
+*/
+.selected-notes {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow: scroll;
+
+    padding: .5rem;
+    border:2px solid black;
+    border-radius: 5px;
+}
+.selected-notes > div {
+    margin: .2rem;
+    padding: .2rem;
+    border:1px solid slategray;
+    border-radius: 5px;
+    background-color: lightseagreen;
+}
+
+
+/* 
+    OPTIONS STYLES
+*/
+.options h2 {
+    margin: 1rem;
+}
+.options li {
+    list-style: none;
+    padding: 0 0 1rem 2rem;
+}
+
+/* 
+    FRETBOARD STYLES
+*/
+
+table {
+    width: 100%;
+    
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+td {
+    height: 35px;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+}
+td > div {
+    height: 100%;
+    width: 100%;
+    line-height: 35px;
+    text-align: center;
+
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.hidden {
+    opacity: 0;
+}
+
+tr > th {
+    width: 30px;
+
+}
+td:first-of-type {
+    width: 20px;
+    border: none;
+    border-right: 8px solid black;
+    border-left: 2px dotted black;
+}
+div.selected {
+    background-color: lightseagreen;
+    opacity: 1;
+}
